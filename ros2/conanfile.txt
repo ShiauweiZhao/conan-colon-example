@@ -1,6 +1,6 @@
 [requires]
 hello/1.0
-
+taskflow/3.5.0
 [generators]
 CMakeDeps
 CMakeToolchain

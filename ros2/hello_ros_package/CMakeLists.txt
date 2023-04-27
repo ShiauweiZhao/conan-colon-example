@@ -8,8 +8,9 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(hello REQUIRED)
-
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(Taskflow REQUIRED)
 add_executable(hello_ros src/hello_ros.cpp)
-target_link_libraries(hello_ros PRIVATE hello::hello)
-
+ament_target_dependencies(hello_ros rclcpp std_msgs hello Taskflow)
 ament_package()
